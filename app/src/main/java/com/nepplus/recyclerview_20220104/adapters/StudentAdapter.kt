@@ -37,7 +37,6 @@ class StudentAdapter(
         
     }
 
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -51,6 +50,12 @@ class StudentAdapter(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
+//          원래는 여기서 실 데이터 반영
+
+        holder.bind( mList[position] )
+
+
 
     }
 
