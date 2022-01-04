@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class StudentAdapter : RecyclerView.Adapter<>() {
 
 //      StudentAdapter 클래스 안에서, 내부 전용 클래스 추가 생성.
-    inner class MyViewHolder : RecyclerView.ViewHolder() {
+    inner class MyViewHolder(row: View) : RecyclerView.ViewHolder(row) {
 
     }
 
