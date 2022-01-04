@@ -2,8 +2,10 @@ package com.nepplus.recyclerview_20220104
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.nepplus.recyclerview_20220104.adapters.StudentAdapter
 import com.nepplus.recyclerview_20220104.models.Student
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +31,12 @@ class MainActivity : AppCompatActivity() {
         
 //          화면이 완성디ㅗ고 난 후에, 어댑터 객체 대입
         mAdapter = StudentAdapter(this, mStudentList)
-        
+
+//          리싸이클러뷰의 어댑터로써 -> mAdapter가 동작하도록 세팅
+        studentRecyclerView.adapter = mAdapter
+
+//      일렬로 줄세운 모양으로 표시
+        studentRecyclerView.layoutManager = LinearLayoutManager(this)
+
     }
 }
